@@ -1,0 +1,15 @@
+{
+    "metadata": {
+        "name": "desk",
+        "type": "rigid_body"
+    },
+    "contents": {
+        "mass": 10,
+        "friction": 0.5,
+        "restitution": 0.1,
+        "shape": {
+            "type": "box",
+            "size": [1.0, 0.5, 0.75]
+        }
+    }
+}

@@ -1,0 +1,152 @@
+{
+    "metadata": {
+        "name": "jaka_pick_up_block_place_plate",
+        "description": "The robot needs to pick up the block on the desk and place it on the plate.",
+        "prompt": "pick up the block on the desk and place it on the plate",
+        "tags": {
+            "robot": "jaka",
+            "atomic_skills": [
+                "MOVE_TO",
+                "GRASP",
+                "PLACE"
+            ],
+            "long_horizon": false
+        }
+    },
+    "short_horizon_tasks": [
+        {
+            "name": "pick_up_block_place_plate",
+            "type": "PICK_AND_PLACE",
+            "atomic_skills": [
+                {
+                    "name": "move_to_block",
+                    "type": "MOVE_TO",
+                    "actor": "arm",
+                    "target": {
+                        "element": "block",
+                        "anchor": {
+                            "type": "APPROACHING_POSE",
+                            "poses": [
+                                {
+                                    "translate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    },
+                                    "rotate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "NEAR",
+                            "subject": "left_arm",
+                            "reference": "block"
+                        }
+                    ]
+                },
+                {
+                    "name": "grasp_block",
+                    "type": "GRASP",
+                    "actor": "gripper",
+                    "target": {
+                        "element": "block",
+                        "anchor": {
+                            "type": "GRASPING_POSE",
+                            "poses": [
+                                {
+                                    "translate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    },
+                                    "rotate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "GRASPED",
+                            "subject": "left_gripper",
+                            "reference": "block"
+                        }
+                    ]
+                },
+                {
+                    "name": "move_to_plate",
+                    "type": "MOVE_TO",
+                    "actor": "left_arm",
+                    "target": {
+                        "element": "plate",
+                        "anchor": {
+                            "type": "APPROACHING_POSE",
+                            "poses": [
+                                {
+                                    "translate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    },
+                                    "rotate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "NEAR",
+                            "subject": "left_arm",
+                            "reference": "plate"
+                        }
+                    ]
+                },
+                {
+                    "name": "place_block_on_plate",
+                    "type": "PLACE",
+                    "actor": "left_gripper",
+                    "target": {
+                        "element": "plate",
+                        "anchor": {
+                            "type": "PLACING_POSE",
+                            "poses": [
+                                {
+                                    "translate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    },
+                                    "rotate": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "success_critial": [
+                        {
+                            "predicate": "ON",
+                            "subject": "block",
+                            "reference": "plate"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

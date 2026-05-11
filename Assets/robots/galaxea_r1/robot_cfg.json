@@ -1,0 +1,15 @@
+{
+    "metadata": {
+        "name": "galaxea_r1",
+        "version": "1.0",
+        "description": "Galaxea R1 robot configuration",
+        "author": "Your Name",
+        "license": "MIT"
+    },
+    "planning_groups": {
+        "arm": {
+            "joints": ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"],
+            "end_effector": "gripper"
+        }
+    }
+}
