@@ -1,0 +1,46 @@
+{
+    "metadata": {
+        "name": "qrcode",
+        "description": "A simple qrcode object.",
+        "type": "rigid_body"
+    },
+    "specs": {
+        "visual": {
+            "mesh": {
+                "asset_path": "Assets/rigid_objects/qrcode/qrcode.obj"
+            },
+            "meterial": {
+                "asset_path":"Assets/meterials/ceramic/ceramic.meterial"
+            }
+        },
+        "physics": {
+            "mesh_collider": {
+                "asset_path": "Assets/rigid_objects/qrcode/qrcode.obj.assetinfo"
+            },
+            "static": false,
+            "dynamic_properties": {
+                "mass": 0.5,
+                "friction": 0.5
+            }
+        },
+        "semantic": {
+            "category": "qrcode"
+        },
+        "affordance": [
+            {
+                "type": "graspable",
+                "properties": {
+                    "pre_grasp_poses":[
+                        {
+                            "position": [0, 0, 0],
+                            "orientation": [0, 0, 0, 1]
+                        }
+                    ]
+                }
+            }
+        ],
+        "articulation": {
+            "type": "fixed"
+        }
+    }
+}

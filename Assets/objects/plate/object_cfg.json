@@ -1,0 +1,44 @@
+{
+    "metadata": {
+        "name": "plate",
+        "description": "A simple plate object.",
+        "type": "rigid_body"
+    },
+    "specs": {
+        "visual": {
+            "mesh": {
+                "asset_path": "Assets/rigid_objects/plate/plate.obj"
+            },
+            "meterial": {
+                "asset_path":"Assets/meterials/ceramic/ceramic.meterial"
+            }
+        },
+        "physics": {
+            "mesh_collider": {
+                "asset_path": "Assets/rigid_objects/plate/plate.obj.assetinfo"
+            },
+            "static": false,
+            "dynamic_properties": {
+                "mass": 2.0,
+                "friction": 0.5
+            }
+        },
+        "semantic": {
+            "category": "plate"
+        },
+        "affordance": [
+            {
+                "type": "placeable",
+                "properties": {
+                    "pre_place_poses":[
+                        {
+                            "position": [0, 0, 0],
+                            "orientation": [0, 0, 0, 1]
+                        }
+                    ]
+                }
+            }
+        ],
+        "articulation": {}
+    }
+}

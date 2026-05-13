@@ -22,6 +22,19 @@
                 "mass": 10.0,
                 "friction": 0.5
             }
+        },
+        "semantic": {
+            "category": "desk"
+        },
+        "affordance": [
+            {
+                "type": "supportable",
+                "description": "The desk can support objects placed on its surface."
+            }
+        ],
+        "articulation": {
+            "type": "fixed",
+            "joint_limits": null
         }
     }
 }

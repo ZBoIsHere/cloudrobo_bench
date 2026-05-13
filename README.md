@@ -2,11 +2,11 @@
 
 scene_cfg.json解释
 
-原子技能列表
-    MOVE_TO：移动末端执行器到目标物体附近的预抓取位姿
-    PICK：闭合末端执行器并将目标物体提升脱离支撑面
-    PLACE：打开末端执行器使得目标物体放置到目标容器
-    ROTATE：抓起目标物体后，旋转末端执行器，使得目标物体产生旋转
+动作原语
+    NAVIGATE: collision-free paths of the entire robot to navigate to a location
+    PICK: pre_place 6D pose; a line trajetory toward object; a close action; retracting line trajectory; to joints
+    PLACE: pre_palce 6D pose; opeing aciton; retracting trajectory
+    ROTATE:
     HANDOVER：左右手交换
     INSERT (插入)：将一个物体精准放入另一个物体的孔洞或槽位（如航插插拔）
     OPEN (打开)：沿铰接路径（转动或平移）改变物体（如门、抽屉）的开启度

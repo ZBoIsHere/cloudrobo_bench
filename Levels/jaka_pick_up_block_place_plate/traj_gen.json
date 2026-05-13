@@ -1,0 +1,10 @@
+{
+    "metadata": {
+        "name": "jaka_pick_up_block_place_plate",
+        "description": "Trajectory for picking up a block and placing it on a plate."
+    },
+    "specs": {
+        "randomization_active": {
+        }
+    }
+}
