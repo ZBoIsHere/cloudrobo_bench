@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "name": "left_container",
+        "description": "Left container object.",
+        "type": "rigid_body",
+        "asset_path": "Assets/rigid_objects/left_container/left_container.prefab"
+    },
+    "properties": {
+        "visual": {
+            "mesh": {
+                "asset_path": "Assets/rigid_objects/left_container/left_container.obj"
+            },
+            "meterial": {
+                "asset_path": "Assets/meterials/ceramic/ceramic.meterial"
+            }
+        },
+        "physics": {
+            "mesh_collider": {
+                "asset_path": "Assets/rigid_objects/left_container/left_container.obj.assetinfo"
+            },
+            "static": true,
+            "dynamic_properties": {
+                "mass": 2.0,
+                "friction": 0.6
+            }
+        },
+        "semantic": {
+            "category": "container"
+        },
+        "affordance": [
+            {
+                "type": "placeable",
+                "properties": {
+                    "pre_place_poses": {
+                        "rotate_with_object": true,
+                        "poses": [
+                            {
+                                "translate": {
+                                    "x": 0,
+                                    "y": 0.1,
+                                    "z": 0
+                                },
+                                "rotate": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "articulation": {}
+    }
+}

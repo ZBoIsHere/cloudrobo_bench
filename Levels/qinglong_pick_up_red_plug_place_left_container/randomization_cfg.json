@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "name": "pick_up_red_plug_and_place_in_left_container",
+        "description": "a task scene where qinglong needs to pick up the red plug and place it into the left container"
+    },
+    "properties": {
+        "pose_randomization": {
+            "enable": true,
+            "properties": [
+                {
+                    "element_names": ["red_plug"],
+                    "enable_translate": true,
+                    "enable_rotate": true,
+                    "randomization_range": {
+                        "translate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        },
+                        "rotate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        }
+                    }
+                },
+                {
+                    "element_names": ["qinglong"],
+                    "enable_translate": true,
+                    "enable_rotate": true,
+                    "randomization_range": {
+                        "translate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        },
+                        "rotate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        }
+                    }
+                }
+            ]
+        },
+        "material_randomazation": {
+            "enable": true,
+            "properties": [
+                {
+                    "element_names": ["red_plug"],
+                    "randomization_range": {
+                        "materials": [
+                            "red_plug_material_1",
+                            "red_plug_material_2",
+                            "red_plug_material_3"
+                        ],
+                        "defiled_materials": [
+                            "red_plug_defiled_material_1",
+                            "red_plug_defiled_material_2",
+                            "red_plug_defiled_material_3"
+                        ]
+                    }
+                }
+            ]
+        },
+        "light_randomization": {
+            "enable": true,
+            "indoor_light_randomization": {
+                "enable": true,
+                "properties": [
+                    {
+                        "element_names": ["point_light_1"],
+                        "enable_switch": true,
+                        "enable_intensity": true,
+                        "enable_color": true,
+                        "randomization_range": {
+                            "intensity": [0.5, 1.5],
+                            "color": {
+                                "r": [0.8, 1.0],
+                                "g": [0.8, 1.0],
+                                "b": [0.8, 1.0]
+                            }
+                        }
+                    }
+                ]
+            },
+            "nature_light_randomization": {
+                "enable": false
+            }
+        }
+    }
+}

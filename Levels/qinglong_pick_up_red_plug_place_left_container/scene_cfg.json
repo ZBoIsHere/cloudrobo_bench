@@ -1,0 +1,166 @@
+{
+    "metadata": {
+        "name": "qinglong_pick_up_red_plug_place_left_container",
+        "description": "using qinglong robot to pick up the red plug and place it into the left container",
+        "asset_path": "Assets/scenes/qinglong_pick_up_red_plug_place_left_container/qinglong_pick_up_red_plug_place_left_container.prefab"
+    },
+    "elements": {
+        "environments": [
+            {
+                "name": "environment_warehouse-nolighting",
+                "type": "cad",
+                "asset_path": "Assets/environments/warehouse_nolighting/warehouse_nolighting.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                }
+            }
+        ],
+        "objects": [
+            {
+                "name": "desk",
+                "type": "rigid_body",
+                "asset_path": "Assets/rigid_objects/desk/desk.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                },
+                "properties": {
+                    "static": true
+                }
+            },
+            {
+                "name": "red_plug",
+                "type": "rigid_body",
+                "asset_path": "Assets/rigid_objects/red_plug/red_plug.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                },
+                "properties": {
+                    "static": false
+                }
+            },
+            {
+                "name": "left_container",
+                "type": "rigid_body",
+                "asset_path": "Assets/rigid_objects/left_container/left_container.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                },
+                "properties": {
+                    "static": true
+                }
+            }
+        ],
+        "robots": [
+            {
+                "name": "qinglong",
+                "type": "single_arm",
+                "asset_path": "Assets/robots/qinglong/qinglong.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                }
+            }
+        ],
+        "lights": [
+            {
+                "name": "point_light_1",
+                "type": "point",
+                "asset_path": "Assets/lights/point_light/point_light.prefab",
+                "transform": {
+                    "translate": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "rotate": {
+                        "x": 50,
+                        "y": -30,
+                        "z": 0
+                    },
+                    "scale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                },
+                "properties": {
+                    "intensity": 1.0,
+                    "color": {
+                        "r": 255,
+                        "g": 255,
+                        "b": 255
+                    }
+                }
+            }
+        ]
+    }
+}

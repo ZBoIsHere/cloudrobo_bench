@@ -1,50 +1,36 @@
 {
     "metadata": {
-        "name": "qrcode",
-        "description": "A simple qrcode object.",
+        "name": "red_plug",
+        "description": "A red plug object.",
         "type": "rigid_body",
-        "asset_path": "Assets/rigid_objects/qrcode/qrcode.prefab"
+        "asset_path": "Assets/rigid_objects/red_plug/red_plug.prefab"
     },
     "properties": {
         "visual": {
             "mesh": {
-                "asset_path": "Assets/rigid_objects/qrcode/qrcode.obj"
+                "asset_path": "Assets/rigid_objects/red_plug/red_plug.obj"
             },
             "meterial": {
-                "asset_path":"Assets/meterials/ceramic/ceramic.meterial"
+                "asset_path": "Assets/meterials/wood/wood.meterial"
             }
         },
         "physics": {
             "mesh_collider": {
-                "asset_path": "Assets/rigid_objects/qrcode/qrcode.obj.assetinfo"
+                "asset_path": "Assets/rigid_objects/red_plug/red_plug.obj.assetinfo"
             },
             "static": false,
             "dynamic_properties": {
                 "mass": 0.5,
-                "friction": 0.5
+                "friction": 0.4
             }
         },
         "semantic": {
-            "category": "qrcode"
+            "category": "red_plug"
         },
         "affordance": [
             {
                 "type": "graspable",
                 "properties": {
-<<<<<<< HEAD
-                    "pre_grasp_poses":[
-                        {
-                            "position": [0, 0, 0],
-                            "orientation": [0, 0, 0, 1]
-                        }
-                    ]
-                }
-            }
-        ],
-        "articulation": {
-            "type": "fixed"
-        }
-=======
                     "pre_grasp_poses": {
                         "rotate_with_object": false,
                         "poses": [
@@ -66,6 +52,5 @@
             }
         ],
         "articulation": {}
->>>>>>> 900c2a3... galaxea and qinglong
     }
 }

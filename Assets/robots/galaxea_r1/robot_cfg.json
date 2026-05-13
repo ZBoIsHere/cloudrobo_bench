@@ -1,0 +1,31 @@
+{
+    "metadata": {
+        "name": "galaxea_r1",
+        "description": "galaxea r1 robot",
+        "type": "wheeled_dual_arm",
+        "asset_path": "Assets/robots/galaxea_r1/galaxea_r1.prefab"
+    },
+    "properties": {
+        "record_topic": [
+            "/galaxea_r1_controller/follow_joint_trajectory/_action/feedback",
+            "/joint_states",
+            "/galaxea_r1_gripper_position_controller/commands",
+            "/galaxea_r1_gripper_controller",
+            "/camera_front/camera_image_color"
+        ],
+        "planning_groups": [
+            {
+                "name": "left_arm"
+            },
+            {
+                "name": "left_gripper"
+            },
+            {
+                "name": "right_arm"
+            },
+            {
+                "name": "right_gripper"
+            }
+        ]
+    }
+}

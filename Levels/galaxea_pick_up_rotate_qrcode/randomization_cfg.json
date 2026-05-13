@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "name": "pick_up_and_rotate_qrcode",
+        "description": "a task scene where the robot needs to pick up the qrcode on the desk and rotate it so that its front faces the robot"
+    },
+    "properties": {
+        "pose_randomization": {
+            "enable": true,
+            "properties": [
+                {
+                    "element_names": ["qrcode"],
+                    "enable_translate": true,
+                    "enable_rotate": true,
+                    "randomization_range": {
+                        "translate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        },
+                        "rotate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        }
+                    }
+                },
+                {
+                    "element_names": ["galaxea_r1"],
+                    "enable_translate": true,
+                    "enable_rotate": true,
+                    "randomization_range": {
+                        "translate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        },
+                        "rotate": {
+                            "x": [0, 0],
+                            "y": [0, 0],
+                            "z": [0, 0]
+                        }
+                    }
+                }
+            ]
+        },
+        "material_randomazation": {
+            "enable": true,
+            "properties": [
+                {
+                    "element_names": ["qrcode"],
+                    "randomization_range": {
+                        "materials": [
+                            "qrcode_material_1",
+                            "qrcode_material_2",
+                            "qrcode_material_3"
+                        ],
+                        "defiled_materials": [
+                            "qrcode_defiled_material_1",
+                            "qrcode_defiled_material_2",
+                            "qrcode_defiled_material_3"
+                        ]
+                    }
+                }
+            ]
+        },
+        "light_randomization": {
+            "enable": true,
+            "indoor_light_randomization": {
+                "enable": true,
+                "properties": [
+                    {
+                        "element_names": ["point_light_1"],
+                        "enable_switch": true,
+                        "enable_intensity": true,
+                        "enable_color": true,
+                        "randomization_range": {
+                            "intensity": [0.5, 1.5],
+                            "color": {
+                                "r": [0.8, 1.0],
+                                "g": [0.8, 1.0],
+                                "b": [0.8, 1.0]
+                            }
+                        }
+                    }
+                ]
+            },
+            "nature_light_randomization": {
+                "enable": false
+            }
+        }
+    }
+}

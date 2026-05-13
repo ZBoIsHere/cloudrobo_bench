@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "name": "qinglong",
+        "description": "qinglong robot (wheel dual-arm)",
+        "type": "single_arm",
+        "asset_path": "Assets/robots/qinglong/qinglong.prefab"
+    },
+    "properties": {
+        "record_topic": [
+            "/qinglong_controller/follow_joint_trajectory/_action/feedback",
+            "/joint_states",
+            "/qinglong_gripper_position_controller/commands",
+            "/qinglong_gripper_controller",
+            "/camera_front/camera_image_color"
+        ],
+        "planning_groups": [
+            {
+                "name": "left_arm"
+            },
+            {
+                "name": "left_gripper"
+            }
+        ]
+    }
+}

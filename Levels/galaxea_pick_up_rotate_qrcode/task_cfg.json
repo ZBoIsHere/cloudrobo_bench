@@ -1,0 +1,70 @@
+{
+    "metadata": {
+        "name": "galaxea_pick_up_rotate_qrcode",
+        "description": "pick up and rotate the qrcode with left arm so that its front faces the robot"
+    },
+    "short_horizon_tasks": [
+        {
+            "name": "pick_up_and_rotate_qrcode",
+            "actions": [
+                {
+                    "action": "pick",
+                    "actor": {
+                        "arm": "left_arm",
+                        "gripper": "left_gripper"
+                    },
+                    "target": {
+                        "object": "qrcode",
+                        "required_affordances": ["graspable"],
+                        "affordance": [
+                            {
+                                "type": "graspable",
+                                "properties": {
+                                    "pre_grasp_poses": {
+                                        "rotate_with_object": false,
+                                        "poses": [
+                                            {
+                                                "translate": {
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.1
+                                                },
+                                                "rotate": {
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "grasped",
+                            "args": ["left_gripper", "qrcode"]
+                        }
+                    ]
+                },
+                {
+                    "action": "rotate",
+                    "actor": {
+                        "arm": "left_arm",
+                        "gripper": "left_gripper"
+                    },
+                    "target": {
+                        "object": "qrcode"
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "facing",
+                            "args": ["qrcode", "galaxea_r1"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

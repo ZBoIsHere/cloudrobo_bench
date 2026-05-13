@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "name": "qinglong_pick_up_red_plug_place_left_container",
+        "description": "Pick up the red plug and place it into the left container"
+    },
+    "short_horizon_tasks": [
+        {
+            "name": "pick_up_red_plug_and_place_in_left_container",
+            "actions": [
+                {
+                    "action": "pick",
+                    "actor": {
+                        "arm": "left_arm",
+                        "gripper": "left_gripper"
+                    },
+                    "target": {
+                        "object": "red_plug",
+                        "required_affordances": ["graspable"],
+                        "affordance": [
+                            {
+                                "type": "graspable",
+                                "properties": {
+                                    "pre_grasp_poses": {
+                                        "rotate_with_object": false,
+                                        "poses": [
+                                            {
+                                                "translate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0.1
+                                                },
+                                                "rotate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "grasped",
+                            "args": ["left_gripper", "red_plug"]
+                        }
+                    ]
+                },
+                {
+                    "action": "place",
+                    "actor": {
+                        "arm": "left_arm",
+                        "gripper": "left_gripper"
+                    },
+                    "target": {
+                        "object": "left_container",
+                        "required_affordances": ["placeable"],
+                        "affordance": [
+                            {
+                                "type": "placeable",
+                                "properties": {
+                                    "pre_place_poses": {
+                                        "rotate_with_object": true,
+                                        "poses": [
+                                            {
+                                                "translate": {
+                                                    "x": 0,
+                                                    "y": 0.1,
+                                                    "z": 0
+                                                },
+                                                "rotate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "success_criteria": [
+                        {
+                            "predicate": "on",
+                            "args": ["red_plug", "left_container"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
