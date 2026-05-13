@@ -1,148 +1,91 @@
 {
     "metadata": {
         "name": "jaka_pick_up_block_place_plate",
-        "description": "The robot needs to pick up the block on the desk and place it on the plate.",
-        "prompt": "pick up the block on the desk and place it on the plate",
-        "tags": {
-            "robot": "jaka",
-            "atomic_skills": [
-                "MOVE_TO",
-                "GRASP",
-                "PLACE"
-            ],
-            "long_horizon": false
-        }
+        "description": "pick up the block on the desk and place it on the plate"
     },
     "short_horizon_tasks": [
         {
             "name": "pick_up_block_place_plate",
-            "type": "PICK_AND_PLACE",
-            "atomic_skills": [
+            "actions": [
                 {
-                    "name": "move_to_block",
-                    "type": "MOVE_TO",
-                    "actor": "arm",
+                    "action": "pick",
+                    "actor": {
+                        "arm": "arm",
+                        "gripper": "gripper"
+                    },
                     "target": {
-                        "element": "block",
-                        "anchor": {
-                            "type": "APPROACHING_POSE",
-                            "poses": [
-                                {
-                                    "translate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    },
-                                    "rotate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
+                        "object": "block",
+                        "required_affordances": ["graspable"],
+                        "affordance": [
+                            {
+                                "type": "graspable",
+                                "properties": {
+                                    "pre_grasp_poses": {
+                                        "rotate_with_object": false,
+                                        "poses": [
+                                            {
+                                                "translate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0.1
+                                                },
+                                                "rotate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            }
+                                        ]
                                     }
                                 }
-                            ]
-                        }
+                            }
+                        ]
                     },
                     "success_criteria": [
                         {
-                            "predicate": "NEAR",
-                            "subject": "left_arm",
-                            "reference": "block"
+                            "predicate": "grasped",
+                            "args": ["gripper", "block"]
                         }
                     ]
                 },
                 {
-                    "name": "grasp_block",
-                    "type": "GRASP",
-                    "actor": "gripper",
+                    "action": "place",
+                    "actor": {
+                        "arm": "arm",
+                        "gripper": "gripper"
+                    },
                     "target": {
-                        "element": "block",
-                        "anchor": {
-                            "type": "GRASPING_POSE",
-                            "poses": [
-                                {
-                                    "translate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    },
-                                    "rotate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
+                        "object": "plate",
+                        "required_affordances": ["placeable"],
+                        "affordance": [
+                            {
+                                "type": "placeable",
+                                "properties": {
+                                    "pre_place_poses": {
+                                        "rotate_with_object": false,
+                                        "poses": [
+                                            {
+                                                "translate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0.1
+                                                },
+                                                "rotate": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            }
+                                        ]
                                     }
                                 }
-                            ]
-                        }
+                            }
+                        ]
                     },
                     "success_criteria": [
                         {
-                            "predicate": "GRASPED",
-                            "subject": "left_gripper",
-                            "reference": "block"
-                        }
-                    ]
-                },
-                {
-                    "name": "move_to_plate",
-                    "type": "MOVE_TO",
-                    "actor": "left_arm",
-                    "target": {
-                        "element": "plate",
-                        "anchor": {
-                            "type": "APPROACHING_POSE",
-                            "poses": [
-                                {
-                                    "translate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    },
-                                    "rotate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    "success_criteria": [
-                        {
-                            "predicate": "NEAR",
-                            "subject": "left_arm",
-                            "reference": "plate"
-                        }
-                    ]
-                },
-                {
-                    "name": "place_block_on_plate",
-                    "type": "PLACE",
-                    "actor": "left_gripper",
-                    "target": {
-                        "element": "plate",
-                        "anchor": {
-                            "type": "PLACING_POSE",
-                            "poses": [
-                                {
-                                    "translate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    },
-                                    "rotate": {
-                                        "x": 0,
-                                        "y": 0,
-                                        "z": 0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    "success_critial": [
-                        {
-                            "predicate": "ON",
-                            "subject": "block",
-                            "reference": "plate"
+                            "predicate": "on",
+                            "args": ["block", "plate"]
                         }
                     ]
                 }

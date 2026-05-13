@@ -2,9 +2,10 @@
     "metadata": {
         "name": "desk",
         "description": "A simple desk object.",
-        "type": "rigid_body"
+        "type": "rigid_body",
+        "asset_path": "Assets/rigid_objects/desk/desk.prefab"
     },
-    "specs": {
+    "properties": {
         "visual": {
             "mesh": {
                 "asset_path": "Assets/rigid_objects/desk/desk.obj"
@@ -29,12 +30,11 @@
         "affordance": [
             {
                 "type": "supportable",
-                "description": "The desk can support objects placed on its surface."
+                "properties": {
+                }
             }
         ],
         "articulation": {
-            "type": "fixed",
-            "joint_limits": null
         }
     }
 }

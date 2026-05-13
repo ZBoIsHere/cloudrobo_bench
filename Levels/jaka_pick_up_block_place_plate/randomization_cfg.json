@@ -3,24 +3,24 @@
         "name": "pick_up_block_and_place_on_plate",
         "description": "a task scene where the robot needs to pick up the block on the desk and place it on the plate",
     },
-    "specs": {
+    "properties": {
         "pose_randomization": {
             "enable": true,
-            "specs":[
+            "properties":[
                 {
                     "element_names": ["block"],
                     "enable_translate": true,
                     "enable_rotate": true,
                     "randomization_range": {
                         "translate": {
-                            "x": [-0.1, 0.1],
-                            "y": [-0.1, 0.1],
-                            "z": [0, 0]
+                            "x": [0,0],
+                            "y": [0,0],
+                            "z": [0,0]
                         },
                         "rotate": {
-                            "x": [0, 0],
-                            "y": [0, 0],
-                            "z": [0, 0]
+                            "x": [0,0],
+                            "y": [0,0],
+                            "z": [0,0]
                         }
                     }
                 },
@@ -30,14 +30,14 @@
                     "enable_rotate": true,
                     "randomization_range": {
                         "translate": {
-                            "x": [-0.1, 0.1],
-                            "y": [-0.1, 0.1],
-                            "z": [0, 0]
+                            "x": [0,0],
+                            "y": [0,0],
+                            "z": [0,0]
                         },
                         "rotate": {
-                            "x": [0, 0],
-                            "y": [0, 0],
-                            "z": [0, 0]
+                            "x": [0,0],
+                            "y": [0,0],
+                            "z": [0,0]
                         }
                     }
                 }
@@ -45,7 +45,7 @@
         },
         "material_randomazation": {
             "enable": true,
-            "specs":[
+            "properties":[
             {
                 "element_names": ["block"],
                 "randomization_range": {
@@ -66,7 +66,7 @@
             "enable": true,
             "indoor_light_randomization": {
                 "enable": true,
-                "specs":[
+                "properties":[
                     {
                         "element_names": ["light_1"],
                         "enable_switch": true,

@@ -2,9 +2,10 @@
     "metadata": {
         "name": "qrcode",
         "description": "A simple qrcode object.",
-        "type": "rigid_body"
+        "type": "rigid_body",
+        "asset_path": "Assets/rigid_objects/qrcode/qrcode.prefab"
     },
-    "specs": {
+    "properties": {
         "visual": {
             "mesh": {
                 "asset_path": "Assets/rigid_objects/qrcode/qrcode.obj"

@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "name": "jaka",
+        "description": "jaka robot",
+        "type": "single_arm",
+        "asset_path": "Assets/robots/jaka/jaka.prefab"
+    },
+    "properties": {
+        "record_topic": [
+            "/jaka_controller/follow_joint_trajectory/_action/feedback",
+            "/joint_states",
+            "/jaka_gripper_position_controller/commands",
+            "/jaka_gripper_controller",
+            "/camera_front/camera_image_color"
+        ],
+        "planning_groups": [
+            {
+                "name": "arm"
+            },
+            {
+                "name": "gripper"
+            }
+        ]
+    }
+}

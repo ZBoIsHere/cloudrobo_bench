@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "name": "block",
+        "description": "A simple block object.",
+        "type": "rigid_body",
+        "asset_path": "Assets/rigid_objects/block/block.prefab"
+    },
+    "properties": {
+        "visual": {
+            "mesh": {
+                "asset_path": "Assets/rigid_objects/block/block.obj"
+            },
+            "meterial": {
+                "asset_path": "Assets/meterials/wood/wood.meterial"
+            }
+        },
+        "physics": {
+            "mesh_collider": {
+                "asset_path": "Assets/rigid_objects/block/block.obj.assetinfo"
+            },
+            "static": false,
+            "dynamic_properties": {
+                "mass": 5,
+                "friction": 0.3
+            }
+        },
+        "semantic": {
+            "category": "block"
+        },
+        "affordance": [
+            {
+                "type": "graspable",
+                "properties": {
+                    "pre_grasp_poses": {
+                        "rotate_with_object": false,
+                        "poses": [
+                            {
+                                "translate": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0.1
+                                },
+                                "rotate": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "articulation": {}
+    }
+}

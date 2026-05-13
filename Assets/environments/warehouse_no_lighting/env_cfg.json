@@ -1,6 +1,7 @@
 {
     "metadata": {
         "name": "Warehouse No Lighting",
-        "description": "A warehouse environment with no lighting."
+        "description": "A warehouse environment with no lighting.",
+        "asset_path": "Assets/environments/warehouse_no_lighting/warehouse_no_lighting.prefab"
     }
 }
