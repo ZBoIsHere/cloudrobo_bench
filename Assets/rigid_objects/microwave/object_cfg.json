@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "name": "microwave",
+        "description": "A countertop microwave oven with a hinged door.",
+        "type": "articulated_box",
+        "asset_path": "Assets/articulated_objects/microwave/microwave.prefab"
+    },
+    "properties": {
+        "visual": {
+            "box_mesh": {
+                "asset_path": "Assets/articulated_objects/microwave/microwave_box.obj"
+            },
+            "door_mesh": {
+                "asset_path": "Assets/articulated_objects/microwave/microwave_door.obj"
+            },
+            "meterial": {
+                "asset_path": "Assets/meterials/metal/stainless_steel.meterial"
+            }
+        },
+        "physics": {
+            "box_collider": {
+                "asset_path": "Assets/articulated_objects/microwave/microwave_box.assetinfo"
+            },
+            "door_collider": {
+                "asset_path": "Assets/articulated_objects/microwave/microwave_door.assetinfo"
+            },
+            "static": false,
+            "dynamic_properties": {
+                "total_mass": 15.0,
+                "door_mass": 1.5,
+                "friction": 0.5
+            }
+        },
+        "semantic": {
+            "category": "microwave",
+            "parts": ["box", "door"]
+        },
+        "affordance": [
+            {
+                "type": "openable",
+                "properties": {
+                    "joint_name": "door_joint"
+                }
+            },
+            {
+                "type": "graspable",
+                "properties": {
+                    "pre_grasp_poses": {
+                        "rotate_with_object": true,
+                        "poses": [
+                            {
+                                "translate": { "x": 0.05, "y": 0, "z": 0 },
+                                "rotate": { "x": 0, "y": 0, "z": 1.57 }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "articulation": [
+            {
+                "leader": "box",
+                "follower": "door",
+                "joint_name": "door_joint",
+                "properties": {
+                    "type": "revolute",
+                    "axis": [0, 0, 1],
+                    "limits": {
+                        "lower": 0,
+                        "upper": 90
+                    }
+                }
+            }
+        ]
+    }
+}

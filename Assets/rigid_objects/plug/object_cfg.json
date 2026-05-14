@@ -1,14 +1,14 @@
 {
     "metadata": {
-        "name": "red_plug",
-        "description": "A red plug object.",
+        "name": "plug",
+        "description": "A plug object.",
         "type": "rigid_body",
-        "asset_path": "Assets/rigid_objects/red_plug/red_plug.prefab"
+        "asset_path": "Assets/rigid_objects/plug/plug.prefab"
     },
     "properties": {
         "visual": {
             "mesh": {
-                "asset_path": "Assets/rigid_objects/red_plug/red_plug.obj"
+                "asset_path": "Assets/rigid_objects/plug/plug.obj"
             },
             "meterial": {
                 "asset_path": "Assets/meterials/wood/wood.meterial"
@@ -16,7 +16,7 @@
         },
         "physics": {
             "mesh_collider": {
-                "asset_path": "Assets/rigid_objects/red_plug/red_plug.obj.assetinfo"
+                "asset_path": "Assets/rigid_objects/plug/plug.obj.assetinfo"
             },
             "static": false,
             "dynamic_properties": {
@@ -25,14 +25,14 @@
             }
         },
         "semantic": {
-            "category": "red_plug"
+            "category": "plug"
         },
         "affordance": [
             {
                 "type": "graspable",
                 "properties": {
                     "pre_grasp_poses": {
-                        "rotate_with_object": false,
+                        "rotate_with_object": true,
                         "poses": [
                             {
                                 "translate": {

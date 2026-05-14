@@ -21,7 +21,7 @@
                                 "type": "graspable",
                                 "properties": {
                                     "pre_grasp_poses": {
-                                        "rotate_with_object": false,
+                                        "rotate_with_object": true,
                                         "poses": [
                                             {
                                                 "translate": {
@@ -51,11 +51,17 @@
                 {
                     "action": "rotate",
                     "actor": {
-                        "arm": "left_arm",
-                        "gripper": "left_gripper"
+                        "arm": "left_arm"
                     },
                     "target": {
-                        "object": "qrcode"
+                        "object": "qrcode",
+                        "required_affordances": ["scalable"],
+                        "affordance": [{
+                            "type": "scanable",
+                            "properties": {
+                                "functional_axis": "+x"
+                            }
+                        }]
                     },
                     "success_criteria": [
                         {

@@ -1,14 +1,14 @@
 {
     "metadata": {
-        "name": "left_container",
-        "description": "Left container object.",
+        "name": "basket",
+        "description": "basket object.",
         "type": "rigid_body",
-        "asset_path": "Assets/rigid_objects/left_container/left_container.prefab"
+        "asset_path": "Assets/rigid_objects/basket/basket.prefab"
     },
     "properties": {
         "visual": {
             "mesh": {
-                "asset_path": "Assets/rigid_objects/left_container/left_container.obj"
+                "asset_path": "Assets/rigid_objects/basket/basket.obj"
             },
             "meterial": {
                 "asset_path": "Assets/meterials/ceramic/ceramic.meterial"
@@ -16,7 +16,7 @@
         },
         "physics": {
             "mesh_collider": {
-                "asset_path": "Assets/rigid_objects/left_container/left_container.obj.assetinfo"
+                "asset_path": "Assets/rigid_objects/basket/basket.obj.assetinfo"
             },
             "static": true,
             "dynamic_properties": {
@@ -25,11 +25,11 @@
             }
         },
         "semantic": {
-            "category": "container"
+            "category": "basket"
         },
         "affordance": [
             {
-                "type": "placeable",
+                "type": "container",
                 "properties": {
                     "pre_place_poses": {
                         "rotate_with_object": true,

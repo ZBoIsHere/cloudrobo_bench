@@ -31,20 +31,6 @@
             {
                 "type": "graspable",
                 "properties": {
-<<<<<<< HEAD
-                    "pre_grasp_poses":[
-                        {
-                            "position": [0, 0, 0],
-                            "orientation": [0, 0, 0, 1]
-                        }
-                    ]
-                }
-            }
-        ],
-        "articulation": {
-            "type": "fixed"
-        }
-=======
                     "pre_grasp_poses": {
                         "rotate_with_object": false,
                         "poses": [
@@ -63,9 +49,16 @@
                         ]
                     }
                 }
+            },
+            {
+                "type": "scanable",
+                "properties": {
+                    "functional_axis": "+x"
+                }
+
             }
+
         ],
         "articulation": {}
->>>>>>> 900c2a3... galaxea and qinglong
     }
 }
